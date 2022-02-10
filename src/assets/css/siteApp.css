@@ -1,0 +1,138 @@
+/*
+
+Version: 1.0.00
+Description:
+Author: Ken Ken - sk3ndi
+Author URI: albertsweb.space
+
+*/
+
+/*** Fonts To Be Used ***/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap');
+
+
+body {
+
+    font-size: 100%;
+    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+
+    /* background: url('../img/hero_bg_img.jpg') no-repeat center; */
+    background-color: #151924;
+
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: #e3e4e7;
+
+}
+
+.uk-logo img {
+    max-height: 2.75em;
+}
+
+.uk-logo svg {
+    max-width: 4em;
+}
+
+/***  Override UI Kit default Font  ***/
+.uk-navbar-nav > li > a,
+.uk-navbar-item,
+.uk-navbar-toggle {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 17px;
+    font-weight: 400;
+    color: #e3e4e7;
+    position: relative;
+}
+
+.uk-navbar-nav > li:hover > a:hover,
+.uk-navbar-nav > li > a[aria-expanded="true"]:hover {
+    color: #5d8a8f;
+}
+
+.uk-navbar-nav > li > a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15px;
+    right: calc(102% - 15px);
+    bottom: 20px;
+    height: 1px;
+    background: #5d8a8f;
+    transition:.3s ease-in-out;
+    transition-property: right;
+}
+
+.uk-navbar-nav>li>a:hover::before {
+    right:15px
+}
+
+.uk-subnav > * > a {
+    font-weight: 400;
+    color: #e3e4e7 !important;
+    position: relative;
+}
+
+.uk-subnav > * > a:hover {
+    color: #5d8a8f !important;
+}
+
+#hero {
+    margin: -80px 0 0 0;
+}
+
+#hero .title {
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: 900;
+    font-size: 7em;
+    color: #d1ae5a;
+}
+
+#works .title,
+#contact .title {
+    color: #d1ae5a;
+    font: 800 3em 'Rubik', sans-serif;
+}
+
+#hero .subheading {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    font-size: 22px;
+    color: #5d8a8f;
+}
+
+#hero .uk-iconnav > * > a,
+#contact .uk-iconnav > * > a {
+    font-size: 1.7em;
+    color: #e3e4e7;
+}
+
+#hero .uk-iconnav > * > a:hover,
+#contact .uk-iconnav > * > a:hover {
+    color: #5d8a8f;
+}
+
+#works .uk-grid > * {
+    padding-left: 20px;
+}
+
+#works .uk-grid > .uk-grid-margin {
+    margin: 20px 0 0 0 !important;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+    color: #e3e4e7;
+    background: #5d8a8f;
+    padding: 15px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+[class*="uk-animation-"] {
+    animation-duration: 1.2s;
+}
