@@ -19,10 +19,10 @@
 
                 <!-- Icon Lists !-->
                 <ul class="uk-iconnav uk-margin-large-top">
-                  <li><a class="uk-icon-link uk-margin-small-right" uk-tooltip="title: EMAIL; pos: top-left; delay: 150" uk-icon="icon: mail; ratio: 1.5;"></a></li>
-                  <li><a class="uk-icon-link uk-margin-small-right" uk-tooltip="title: SKYPE; pos: top-left; delay: 150" uk-icon="icon: receiver; ratio: 1.5;"></a></li>
-                  <li><a class="uk-icon-link uk-margin-small-right" uk-tooltip="title: LINKEDIN; pos: top-left; delay: 150" uk-icon="icon: linkedin; ratio: 1.5;"></a></li>
-                  <li><a uk-tooltip="title: GITHUB; pos: top-left; delay: 150" uk-icon="icon: github; ratio: 1.5;"></a></li>
+                  <li><a href="mailto:thedev.kenalbert@gmail.com" class="uk-icon-link uk-margin-small-right" target="_blank" uk-tooltip="title: EMAIL; pos: top-left; delay: 150" uk-icon="icon: mail; ratio: 1.5;"></a></li>
+                  <li><a href="skype:tornoalbert?chat" class="uk-icon-link uk-margin-small-right" target="_blank" uk-tooltip="title: SKYPE; pos: top-left; delay: 150" uk-icon="icon: receiver; ratio: 1.5;"></a></li>
+                  <li><a href="https://www.linkedin.com/in/albert-t-98155165/" class="uk-icon-link uk-margin-small-right" target="_blank" uk-tooltip="title: LINKEDIN; pos: top-left; delay: 150" uk-icon="icon: linkedin; ratio: 1.5;"></a></li>
+                  <li><a href="https://github.com/sk3ndi" target="_blank" uk-tooltip="title: GITHUB; pos: top-left; delay: 150" uk-icon="icon: github; ratio: 1.5;"></a></li>
                 </ul>
             </div>
           </div>

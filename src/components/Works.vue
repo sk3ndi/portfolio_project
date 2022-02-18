@@ -5,46 +5,39 @@
           <div class="uk-width-3-5@m uk-animation-scale-up uk-animation">
              <h1 class="uk-margin-top uk-margin-large-bottom title">My Previous Works</h1>
 
-               <div v-if="workTabs === 1" class="uk-child-width-1-4@s uk-child-width-1-2 uk-grid uk-flex-center uk-animation-scale-up" uk-grid>
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_1.jpg" alt="Logo" /></div>
+               <div v-for="infos in get_active_tab_content" :key="infos.name" class="uk-child-width-1-4@s uk-child-width-1-2 uk-grid uk-flex-center uk-animation-scale-up" uk-grid>
+
+                  <div class="" v-for="info_list in infos.work_lists" :key="info_list.title" >
+                      <div class="uk-inline uk-transition-toggle">
+                        <img :src="get_img_url(info_list.img)" :alt="info_list.name" />
+
+                        <!--  Image Overlay  !-->
+                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default">
+                          <!-- Overlay  Context !-->
+                          <div class="uk-position-center">
+                            <div class="uk-transition-slide-top-small">
+                              <h5 class="uk-margin-small uk-text-uppercase">{{ info_list.title }}</h5>
+                            </div>
+                            <div class="uk-transition-slide-bottom-small">
+                              <a v-if="infos.name === work_category" :href="get_img_url(info_list.url)" class="uk-button uk-button-gold" target="_blank">Click Here</a>
+                              <a v-else :href="info_list.url" class="uk-button uk-button-gold" target="_blank">Click Here</a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
                   </div>
 
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_2.jpg" alt="Logo" /></div>
-                  </div>
-
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_3.jpg" alt="Logo" /></div>
-                  </div>
-
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_4.jpg" alt="Logo" /></div>
-                  </div>
-
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_5.jpg" alt="Logo" /></div>
-                  </div>
-
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_6.jpg" alt="Logo" /></div>
-                  </div>
-
-                  <div class="">
-                      <div><img src="@/assets/img/works_img_1.jpg" alt="Logo" /></div>
-                  </div>
-               </div>
-
-               <div v-if="workTabs === 2" class="uk-child-width-1-3@s uk-child-width-1-2 uk-grid uk-animation-scale-up" uk-grid>
-                  <div>
-                      <div><img src="@/assets/img/works_img_1.jpg" alt="Logo" /></div>
-                  </div>
                </div>
 
                <div class="uk-margin-medium-top">
                   <ul id="site_tabs" class="uk-flex-center uk-subnav">
-                    <li><a v-on:click.stop.prevent="worksActiveTab(1)" href="" >Wordpress</a></li>
-                    <li><a v-on:click.stop.prevent="worksActiveTab(2)" href="" >Web Design</a></li>
+
+                    <!-- Get the Work CategoryName as Tabs !-->
+                    <li v-for="tab in work_category_data" :key="tab.name" >
+                      <a v-on:click.stop.prevent="work_active_tab(tab.id)" href="" >{{tab.name}}</a>
+                    </li>
+
                   </ul>
               </div>
 
@@ -55,16 +48,45 @@
 </template>
 
 <script>
+import web_data from "./data/webData.json";
+//import axios from "axios";
+
 export default {
   data() {
     return {
-      workTabs: 1,
+      work_category_data: web_data.work_category,
+      work_tab_switcher: 1,
+      work_category: 'Web Design'
     };
   },
+
+  //async created() {
+    //try {
+    //  const res = await axios.get(`src/components/data/webData.json`);
+      //  console.log(res.date);
+    //} catch (error) {
+      //  console.log(error);
+    //}
+  //},
+
+  computed: {
+    // Toggle Current Work Category
+    get_active_tab_content: function () {
+      return this.work_category_data.filter( items => items.id === this.work_tab_switcher )
+      //return true
+    }
+  },
+
   methods: {
-    worksActiveTab: function (tabNumber) {
-      this.workTabs = tabNumber;
+    // Work Tabs Active Toggles
+    work_active_tab: function (tabNumber) {
+      this.work_tab_switcher = tabNumber;
+    },
+    // Get Images link Dynamically
+    get_img_url(index) {
+      return require('@/assets/img/'+index)
     },
   },
+
 };
 </script>

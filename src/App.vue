@@ -1,16 +1,13 @@
 <template>
   <Navigation />
-  <Works />
-  <Contact />
+  <!--   <Home /> !-->
   <Footer />
   <MobileMenu />
-
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue'
-import Works from './components/Works.vue'
-import Contact from './components/Contact.vue'
+//import Home from './views/Home.vue'
 import Footer  from './components/Footer.vue'
 import MobileMenu  from './components/MobileMenu.vue'
 
@@ -19,8 +16,7 @@ export default {
   name: 'App',
   components: {
     Navigation,
-    Works,
-    Contact,
+    //Home,
     Footer,
     MobileMenu
   }

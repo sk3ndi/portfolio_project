@@ -18,14 +18,18 @@ body {
     line-height: 1.5em;
     font-family: 'Montserrat', sans-serif;
 
-    /* background: url('../img/hero_bg_img.jpg') no-repeat center; */
-    background-color: #151924;
-
-    background-size: cover;
-    background-attachment: fixed;
-
+    background: url('../img/hero_bg_img_v2.jpg') center center/cover no-repeat fixed #151924;
+    background-blend-mode: overlay;
     color: #e3e4e7;
 
+}
+
+.uk-link, a {
+    color: #5d8a8f;
+}
+
+a:hover {
+    color: #5d8a8f;
 }
 
 .uk-logo img {
@@ -135,4 +139,20 @@ body {
 
 [class*="uk-animation-"] {
     animation-duration: 1.2s;
+}
+
+.uk-overlay-default {
+  background: rgba(93, 138, 143,.95);
+}
+
+.uk-button-gold {
+  background: #d1ae5a;
+}
+
+.uk-button-gold:hover {
+  color: #fff;
+}
+
+#works h5 {
+  color: #fff;
 }

@@ -11,7 +11,7 @@
             </div>
 
             <!-- Right Side !-->
-            <div class="uk-width-expand@m uk-animation-scale-up uk-animation uk-text uk-visible@m" style="animation-delay: 1050ms;">
+            <div class="uk-width-expand@m uk-animation-scale-up uk-animation uk-text " style="animation-delay: 1050ms;">
               <h1 class="title">ALBERT</h1>
                 <p class="subheading">Website Editor - Wordpress | Divi | Elementor</p>
                 <p>A simple website I've created just to upload some of my previous works. Feel free to check it out.</p>
@@ -30,10 +30,19 @@
         </div>
       </div>
     </section>
+    <Works />
+    <Contact />
 </template>
 
 <script>
-export default {
+import Works from '../components/Works.vue'
+import Contact from '../components/Contact.vue'
 
+export default {
+  name: 'App',
+  components: {
+    Works,
+    Contact
+  }
 }
 </script>
