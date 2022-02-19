@@ -1,6 +1,6 @@
 <template>
   <Navigation />
-  <!--   <Home /> !-->
+  <Home />
   <Footer />
   <MobileMenu />
 </template>
@@ -16,7 +16,7 @@ export default {
   name: 'App',
   components: {
     Navigation,
-    //Home,
+    Home,
     Footer,
     MobileMenu
   }
