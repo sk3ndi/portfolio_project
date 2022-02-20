@@ -94,6 +94,7 @@ a:hover {
     color: #d1ae5a;
 }
 
+
 #works .title,
 #contact .title {
     color: #d1ae5a;
@@ -155,4 +156,15 @@ a:hover {
 
 #works h5 {
   color: #fff;
+}
+
+
+@media screen and (max-width: 640px) {
+    #hero .title {
+      font-size: 4.5em;
+    }
+
+    #works .uk-grid > * {
+        padding-left: 35px;
+    }
 }
