@@ -3,7 +3,7 @@
     <nav class="uk-navbar uk-navbar-transparent uk-container uk-sticky" uk-navbar>
       <!-- ::::: Site Logo & Hambuger Button ::::: !-->
       <div class="uk-navbar-left">
-            <router-link to="/Home" class="uk-navbar-item uk-logo" uk-scrollspy="target: .site_logo; cls: uk-animation-slide-top-medium; delay: 300; repeat: true;">
+            <router-link to="/" class="uk-navbar-item uk-logo" uk-scrollspy="target: .site_logo; cls: uk-animation-slide-top-medium; delay: 300; repeat: true;">
               <img class="site_logo" src="@/assets/svg/Logo-Light.svg" alt="Logo" uk-svg />
             </router-link>
       </div>
